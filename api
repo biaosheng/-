@@ -1,0 +1,17 @@
+import requests
+
+def post(): 
+        url = "https://127.0.0.1/getsensordata/"
+        payload = {
+            'site': 'www.ti.com',
+            'user': 'XXXXXXXX',
+            'ua': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36 Edg/90.0.818.66',
+            'abck': '632033954331633EBF72D1B3AD92D1A5~-1~YAAQZBLSPLIrCAuAAQAAby+JGQeUP3D/fnyBTKceciVEFgf8a1ZpcInqJ6R0TgxHKFrz3cOVgwlua88NFnPiiPr53qci5qFGIOsTn9YBBWF/IUWH8YtV5zA7xfbQoSWaxh61esfSdtx55CbK/9bkJMeDx4mOMPWBt2GaWWQDqJLkxBNISf35EEUZXjQgqn4VVy3RlUS2jNni+Y8xS7uvJ1hNnLCinBYYg7tKZwTnnIZHKlaYh6lMMDtr2Ow+6dUSLdg/0CiMsjo5VXXesS8AXLdw+ysvh9jznlP2JWBJelWRQzmJWV+OkB0TpMPw3xfneZm1IhZl1OXXyWJBH6cuc2X4oUT4GRnZPJC8wFaxtNzC78i00H81vX9B4egivh0qwE9loET4yHYb+oMiSjJ4mn+Pp1k6u3l4AI45~-1~-1~-1',
+            'bmsz':'F1B130D0351447D84D036F90303DC8C4~YAAQLRTSPMkyGAiAAQAA/5zSNw9CD8fBKFW0f8sEw+z7da06obWPFHMFRo8RJqxOGv7muu8XeAEJjrh5P5s8seJgYafWuXK7uK5/zF2A0S/xp0ZGB5DOidaQ8xT9MLetn1MW8M8VxlrT2Ql/MgkM64tKPr5iVVce3tyHBHDK+qaHBwX/z/NAeMUtY8B2p/VGIiJdAZ+P+ImuYTPNzeS2YpGBla+oqHyjCGRZD2CXCh4KkrFpfRbo/MlbWqkNE5y/NVLUlr1PBhsHpO4ZTpQKCFjfZ/A2hXlOo6dZIs2FhkQSvoTTJzMDG4av4TepN3MQ7rPfRi1NcKrLD2sfXbMcLKy+I8pfdscVZB9VeykSz0Vbx8RntH4pha3O2nzNMJALT/RjBZs3N/5rO9hEKew=~3162948~4538680'
+        }
+        headers = {}
+        response = requests.post(url, headers=headers,data=payload)
+        with open('test.txt','a') as f:
+            f.write(response.text)
+        print("1\n")    
+post()
